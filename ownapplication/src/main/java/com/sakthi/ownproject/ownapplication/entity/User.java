@@ -23,10 +23,10 @@ public class User {
     private String userCredentials;
 
     @Column(name = "user_address")
-    private String Address;
+    private String address;
 
     @Column(name = "user_number")
-    private String Number;
+    private String number;
 
     public Long getUserId() {
         return userId;
@@ -53,25 +53,27 @@ public class User {
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 
     public String getNumber() {
-        return Number;
+        return number;
     }
 
     public void setNumber(String number) {
-        Number = number;
+        this.number = number;
     }
 
-    @Override
-    public String toString() {
-        return "User [userId=" + userId + ", userEmail=" + userEmail + ", userCredentials=" + userCredentials
-                + ", Address=" + Address + ", Number=" + Number + "]";
+    public User(Long userId, String userEmail, String userCredentials, String address, String number) {
+        this.userId = userId;
+        this.userEmail = userEmail;
+        this.userCredentials = userCredentials;
+        this.address = address;
+        this.number = number;
     }
 
 }

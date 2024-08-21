@@ -4,8 +4,8 @@ public class UserResponseDto {
     private Long userId;
     private String userEmail;
     private String userCredentials;
-    private String Address;
-    private String Number;
+    private String address;
+    private String number;
     public Long getUserId() {
         return userId;
     }
@@ -25,24 +25,23 @@ public class UserResponseDto {
         this.userCredentials = userCredentials;
     }
     public String getAddress() {
-        return Address;
+        return address;
     }
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
     public String getNumber() {
-        return Number;
+        return number;
     }
     public void setNumber(String number) {
-        Number = number;
+        this.number = number;
     }
     public UserResponseDto(Long userId, String userEmail, String userCredentials, String address, String number) {
         this.userId = userId;
         this.userEmail = userEmail;
         this.userCredentials = userCredentials;
-        Address = address;
-        Number = number;
+        this.address = address;
+        this.number = number;
     }
-
 
 }
