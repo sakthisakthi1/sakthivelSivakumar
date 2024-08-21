@@ -3,7 +3,7 @@ package com.sakthi.ownproject.ownapplication.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sakthi.ownproject.ownapplication.entity.User;
-import com.sakthi.ownproject.ownapplication.requestDao.UserDto;
+import com.sakthi.ownproject.ownapplication.requestDto.UserRequestDto;
 import com.sakthi.ownproject.ownapplication.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +19,7 @@ public class UserController {
     UserService userService;
 
     @PostMapping("/register/new/user")
-    public User registerForUser(@RequestBody UserDto userDto) {
+    public User registerForUser(@RequestBody UserRequestDto userDto) {
         User registeredUser = userService.registerForUser(userDto);
         return registeredUser;
     }
