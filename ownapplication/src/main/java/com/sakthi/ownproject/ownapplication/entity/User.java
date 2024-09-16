@@ -22,6 +22,23 @@ public class User {
     @Column(name = "user_credential")
     private String userCredentials;
 
+    @Column(name = "user_address")
+    private String address;
+
+    @Column(name = "user_number")
+    private String number;
+
+    @Column(name = "user_name")
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public Long getUserId() {
         return userId;
     }
@@ -45,4 +62,24 @@ public class User {
     public void setUserCredentials(String userCredentials) {
         this.userCredentials = userCredentials;
     }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public User() {
+    }
+
 }
