@@ -8,4 +8,6 @@ import com.sakthi.ownproject.ownapplication.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
+    User findByUserId(Long userId);
+
 }

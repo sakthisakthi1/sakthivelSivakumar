@@ -28,6 +28,17 @@ public class User {
     @Column(name = "user_number")
     private String number;
 
+    @Column(name = "user_name")
+    private String userName;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public Long getUserId() {
         return userId;
     }
@@ -68,12 +79,7 @@ public class User {
         this.number = number;
     }
 
-    public User(Long userId, String userEmail, String userCredentials, String address, String number) {
-        this.userId = userId;
-        this.userEmail = userEmail;
-        this.userCredentials = userCredentials;
-        this.address = address;
-        this.number = number;
+    public User() {
     }
 
 }
