@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sakthi.ownproject.ownapplication.entity.User;
 import com.sakthi.ownproject.ownapplication.requestDto.UserRequestDto;
 import com.sakthi.ownproject.ownapplication.responseDto.BasicResponse;
-import com.sakthi.ownproject.ownapplication.responseDto.UserResponseDto;
 import com.sakthi.ownproject.ownapplication.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +26,7 @@ public class UserController {
         return ResponseEntity.ok().body(registerUser);
     }
 
-    @GetMapping("/login")
+    @GetMapping("/login/user")
     public ResponseEntity<BasicResponse> loginForUser(@RequestBody UserRequestDto userRequestDto) {
         BasicResponse stringMessage = userService.loginForUser(userRequestDto);
         return ResponseEntity.ok().body(stringMessage);
